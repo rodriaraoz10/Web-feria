@@ -444,8 +444,14 @@ section[id] {
 
 .quote-source {
   font-size: 0.92rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+}
+
+.about-signoff {
+  font-weight: 700;
+  text-align: left;
 }
 
 .about-media {
@@ -640,9 +646,38 @@ section[id] {
   align-items: flex-start;
 }
 
+.footer-contact {
+  display: grid;
+  gap: 1rem;
+  justify-items: end;
+  text-align: right;
+}
+
 .footer-title {
   margin: 0.2rem 0 0;
   font-size: 2rem;
+}
+
+.footer-socials {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: end;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-social img {
+  width: 1.35rem;
+  height: 1.35rem;
+  object-fit: contain;
+}
+
+.footer-social span {
+  line-height: 1.4;
 }
 
 .reveal {
@@ -776,6 +811,12 @@ section[id] {
 
   .gallery-grid {
     column-count: 1;
+  }
+
+  .footer-contact,
+  .footer-socials {
+    justify-items: start;
+    text-align: left;
   }
 }
 
