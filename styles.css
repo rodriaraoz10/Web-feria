@@ -1,8 +1,8 @@
 :root {
-  --bg: #efe5d5;
-  --bg-soft: #f7f1e7;
-  --surface: rgba(255, 251, 245, 0.72);
-  --surface-strong: rgba(255, 250, 244, 0.92);
+  --bg: #e8dfd2;
+  --bg-soft: #f4eee5;
+  --surface: rgba(255, 252, 247, 0.76);
+  --surface-strong: rgba(255, 252, 248, 0.92);
   --ink: #241814;
   --muted: #665047;
   --line: rgba(67, 40, 27, 0.16);
@@ -28,9 +28,26 @@ body {
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(159, 86, 51, 0.14), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(130, 92, 65, 0.12), transparent 24%),
-    linear-gradient(180deg, #fbf6ee 0%, var(--bg) 45%, #eadfce 100%);
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.68), transparent 0 22%),
+    radial-gradient(circle at 82% 22%, rgba(141, 108, 82, 0.07), transparent 0 18%),
+    radial-gradient(circle at 76% 78%, rgba(116, 87, 67, 0.08), transparent 0 20%),
+    radial-gradient(circle at 24% 74%, rgba(255, 255, 255, 0.42), transparent 0 18%),
+    repeating-linear-gradient(
+      115deg,
+      rgba(110, 83, 64, 0.03) 0,
+      rgba(110, 83, 64, 0.03) 2px,
+      transparent 2px,
+      transparent 11px
+    ),
+    repeating-linear-gradient(
+      15deg,
+      rgba(255, 255, 255, 0.18) 0,
+      rgba(255, 255, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 13px
+    ),
+    linear-gradient(180deg, #f5efe6 0%, var(--bg) 48%, #ddd1c1 100%);
+  background-attachment: fixed;
 }
 
 body.nav-open {
