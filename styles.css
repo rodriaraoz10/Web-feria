@@ -3,6 +3,8 @@
   --bg-soft: #faf7f2;
   --surface: rgba(255, 253, 249, 0.78);
   --surface-strong: rgba(255, 254, 251, 0.92);
+  --soma-bg-base: #eeeae1;
+  --soma-bg-overlay: rgba(246, 242, 234, 0.3);
   --ink: #241814;
   --muted: #665047;
   --line: rgba(67, 40, 27, 0.16);
@@ -27,8 +29,41 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--soma-bg-base);
+}
+
+body.page-textured {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+body.page-textured::before,
+body.page-textured::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body.page-textured::before {
+  z-index: -3;
+  background-color: var(--soma-bg-base);
+  background-image: url("public/textures/soma-yeso-texture.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+body.page-textured::after {
+  z-index: -2;
   background:
-    linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 52%, #ebe5dc 100%);
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(238, 234, 225, 0.34) 100%
+    ),
+    var(--soma-bg-overlay);
 }
 
 body.nav-open {
@@ -55,6 +90,8 @@ button {
 }
 
 main {
+  position: relative;
+  z-index: 0;
   overflow: clip;
 }
 
@@ -635,6 +672,8 @@ section[id] {
 }
 
 .site-footer {
+  position: relative;
+  z-index: 0;
   padding: 0 0 2.25rem;
 }
 
@@ -815,6 +854,13 @@ section[id] {
   .footer-socials {
     justify-items: start;
     text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  body.page-textured::before,
+  body.page-textured::after {
+    position: absolute;
   }
 }
 
