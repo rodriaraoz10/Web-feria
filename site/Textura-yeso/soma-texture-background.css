@@ -1,0 +1,57 @@
+
+/* SOMA — fondo textura yeso
+   1) Copiar soma-yeso-texture.webp a /public/textures/soma-yeso-texture.webp
+   2) Aplicar la clase .page-textured o adaptar el selector a .articles-page / .numbers-page
+*/
+
+:root {
+  --soma-bg-base: #eeeae1;
+  --soma-bg-wash: rgba(246, 242, 234, 0.42);
+}
+
+.page-textured,
+.articles-page,
+.numbers-page {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--soma-bg-base);
+}
+
+.page-textured::before,
+.articles-page::before,
+.numbers-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: url('/textures/soma-yeso-texture.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-textured::after,
+.articles-page::after,
+.numbers-page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(238, 234, 225, 0.34) 100%),
+    rgba(246, 242, 234, 0.26);
+}
+
+/* En pantallas chicas conviene evitar background fixed si notas tirones */
+@media (max-width: 768px) {
+  .page-textured::before,
+  .articles-page::before,
+  .numbers-page::before,
+  .page-textured::after,
+  .articles-page::after,
+  .numbers-page::after {
+    position: absolute;
+  }
+}
