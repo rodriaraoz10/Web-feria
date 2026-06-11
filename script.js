@@ -6,9 +6,6 @@ const revealItems = document.querySelectorAll(".reveal");
 const parallaxItems = document.querySelectorAll("[data-parallax]");
 const filterButtons = [...document.querySelectorAll(".filter-chip")];
 const galleryCards = [...document.querySelectorAll(".gallery-card")];
-const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
 
 const closeMenu = () => {
   if (!menuToggle || !nav) {
@@ -20,10 +17,19 @@ const closeMenu = () => {
   document.body.classList.remove("nav-open");
 };
 
-const setActiveNavLink = (id) => {
+const normalizePath = (value) => {
+  const path = value.split("/").pop() || "index.html";
+  return path === "" ? "index.html" : path;
+};
+
+const setActiveNavLink = () => {
+  const currentPath = normalizePath(window.location.pathname);
+
   navLinks.forEach((link) => {
-    const isActive = link.getAttribute("href") === `#${id}`;
+    const targetPath = normalizePath(link.getAttribute("href") || "");
+    const isActive = targetPath === currentPath;
     link.classList.toggle("is-active", isActive);
+
     if (isActive) {
       link.setAttribute("aria-current", "page");
     } else {
@@ -68,27 +74,6 @@ const revealObserver = new IntersectionObserver(
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-if (sections.length > 0) {
-  const navObserver = new IntersectionObserver(
-    (entries) => {
-      const visibleEntries = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-      if (visibleEntries[0]?.target.id) {
-        setActiveNavLink(visibleEntries[0].target.id);
-      }
-    },
-    {
-      threshold: [0.3, 0.5, 0.7],
-      rootMargin: "-18% 0px -45% 0px"
-    }
-  );
-
-  sections.forEach((section) => navObserver.observe(section));
-  setActiveNavLink(sections[0].id);
-}
-
 const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const updateParallax = () => {
@@ -100,7 +85,7 @@ const updateParallax = () => {
 
   parallaxItems.forEach((item) => {
     const rect = item.getBoundingClientRect();
-    const distance = (rect.top + rect.height / 2 - viewportHeight / 2) * -0.035;
+    const distance = (rect.top + rect.height / 2 - viewportHeight / 2) * -0.03;
     item.style.transform = `translate3d(0, ${distance}px, 0)`;
   });
 };
@@ -139,6 +124,7 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("load", () => {
+  setActiveNavLink();
   header?.classList.toggle("scrolled", window.scrollY > 18);
   updateParallax();
 });
