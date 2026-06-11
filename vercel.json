@@ -15,10 +15,6 @@
       "destination": "/sobre.html"
     },
     {
-      "source": "/historia",
-      "destination": "/historia.html"
-    },
-    {
       "source": "/contacto",
       "destination": "/contacto.html"
     }
