@@ -386,9 +386,9 @@ section[id] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1rem;
   min-width: 0;
-  min-height: clamp(420px, 56vw, 680px);
+  min-height: clamp(380px, 48vw, 540px);
   padding: clamp(2rem, 4vw, 3.8rem);
   border-radius: 0;
   background: var(--surface-strong);
@@ -396,10 +396,10 @@ section[id] {
 
 .hero-copy h1 {
   margin: 0;
-  max-width: 11ch;
-  font-size: clamp(2.95rem, 6vw, 4.9rem);
-  line-height: 0.92;
-  letter-spacing: -0.04em;
+  max-width: 9ch;
+  font-size: clamp(2.35rem, 4.9vw, 3.95rem);
+  line-height: 0.94;
+  letter-spacing: -0.03em;
 }
 
 .hero-title-line {
@@ -411,8 +411,8 @@ section[id] {
 }
 
 .hero-lead {
-  max-width: 32rem;
-  font-size: 1.08rem;
+  max-width: 26rem;
+  font-size: 1rem;
 }
 
 .hero-actions,
@@ -420,6 +420,26 @@ section[id] {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
+}
+
+.hero-support {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+  gap: clamp(1.2rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.hero-support .hero-actions {
+  align-self: stretch;
+}
+
+.hero-support .hero-actions,
+.hero-support .hero-details {
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 251, 245, 0.78);
+  box-shadow: var(--shadow-soft);
 }
 
 .button {
@@ -468,10 +488,9 @@ section[id] {
 
 .hero-details {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 0.6rem;
-  width: min(100%, 320px);
+  width: 100%;
 }
 
 .detail-card {
@@ -496,7 +515,7 @@ section[id] {
 .hero-video-card {
   position: relative;
   height: 100%;
-  min-height: clamp(420px, 58vw, 680px);
+  min-height: clamp(380px, 48vw, 540px);
   border-radius: 0;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -954,6 +973,10 @@ section[id] {
   padding: 0 0 2.5rem;
 }
 
+.home-page .site-footer {
+  padding: 0 0 1.4rem;
+}
+
 .footer-shell {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr) minmax(360px, 1.2fr);
@@ -962,6 +985,13 @@ section[id] {
   border-radius: 0;
   background: rgba(255, 250, 243, 0.86);
   align-items: stretch;
+}
+
+.home-page .footer-shell {
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, 0.8fr) auto;
+  gap: clamp(1.25rem, 3vw, 2.4rem);
+  padding: clamp(1.25rem, 2.4vw, 1.7rem);
+  align-items: center;
 }
 
 .footer-title {
@@ -977,12 +1007,22 @@ section[id] {
   align-content: start;
 }
 
+.home-page .footer-copy {
+  max-width: 30rem;
+}
+
 .footer-contact {
   display: grid;
   gap: 0.9rem;
   align-content: start;
   padding-top: 0.8rem;
   font-size: clamp(1rem, 1.8vw, 1.15rem);
+}
+
+.home-page .footer-contact {
+  gap: 0.65rem;
+  align-content: center;
+  padding-top: 0;
 }
 
 .footer-contact a {
@@ -993,6 +1033,15 @@ section[id] {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.home-page .footer-action-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
 }
 
 .footer-action {
@@ -1008,6 +1057,19 @@ section[id] {
   font-weight: 700;
   text-align: center;
   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.home-page .footer-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 120px;
+  min-height: 48px;
+  padding: 0.85rem 1.15rem;
+  font-size: 1rem;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .footer-action:hover,
@@ -1045,6 +1107,15 @@ section[id] {
 
   .footer-shell {
     grid-template-columns: 1fr;
+  }
+
+  .home-page .footer-shell {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .home-page .footer-action-grid {
+    justify-content: flex-start;
   }
 }
 
@@ -1088,6 +1159,7 @@ section[id] {
   }
 
   .hero-layout,
+  .hero-support,
   .about-layout,
   .history-layout,
   .contact-layout {
@@ -1101,6 +1173,10 @@ section[id] {
 
   .hero-video-card {
     min-height: 20rem;
+  }
+
+  .hero-details {
+    grid-template-columns: 1fr;
   }
 
   .history-media,
@@ -1130,8 +1206,13 @@ section[id] {
   }
 
   .hero-copy h1 {
-    font-size: clamp(3rem, 14vw, 4.8rem);
+    font-size: clamp(2.45rem, 11vw, 3.7rem);
     max-width: none;
+  }
+
+  .hero-support .hero-actions,
+  .hero-support .hero-details {
+    padding: 1rem;
   }
 
   .timeline-block h3,
@@ -1180,6 +1261,15 @@ section[id] {
 
   .footer-action {
     min-height: 8rem;
+  }
+
+  .home-page .footer-action-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-page .footer-action {
+    width: 100%;
   }
 
   .mission-quote {
