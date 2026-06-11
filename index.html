@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="page-textured">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <div class="page-glow page-glow-left" aria-hidden="true"></div>
     <div class="page-glow page-glow-right" aria-hidden="true"></div>
 
@@ -50,164 +52,197 @@
       </div>
     </header>
 
-    <main>
+    <main id="contenido" class="site-main">
       <section class="hero section" id="inicio">
-        <div class="container hero-grid">
+        <div class="container hero-layout">
           <div class="hero-copy reveal">
             <p class="eyebrow">Cafayate, Salta</p>
             <h1>Cafayate Artesanal</h1>
             <p class="hero-subtitle">Asociación de Artesanos Independientes</p>
+            <p class="hero-lead">
+              Un espacio colectivo de creación, encuentro y trabajo artesanal en el
+              corazón de Cafayate.
+            </p>
 
-            <div class="hero-details">
-              <p>Vicario Toscano 58, A4427 Cafayate, Salta</p>
-              <a
-                class="inline-link"
-                href="https://maps.app.goo.gl/rRPGDSfmMCezSJ6JA"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Ubicación en Google Maps
+            <div class="hero-actions">
+              <a class="button button-primary" href="#quienes-somos">
+                Conocer la asociación
               </a>
+              <a class="button button-secondary" href="#trabajo">Ver nuestro trabajo</a>
             </div>
 
-            <div class="hero-map-card">
-              <div class="hero-map-frame" aria-hidden="true">
-                <iframe
-                  src="https://maps.google.com/maps?q=Vicario%20Toscano%2058%2C%20Cafayate%2C%20Salta&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="Mapa de Cafayate Artesanal"
-                ></iframe>
+            <div class="hero-details" aria-label="Datos principales">
+              <div class="detail-card">
+                <span class="detail-label">Dirección</span>
+                <p>Vicario Toscano 58, A4427 Cafayate, Salta</p>
               </div>
-              <a
-                class="hero-map-link"
-                href="https://maps.app.goo.gl/rRPGDSfmMCezSJ6JA"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir ubicación de Cafayate Artesanal en Google Maps"
-              >
-                <span>Ver en Google Maps</span>
-              </a>
+              <div class="detail-card">
+                <span class="detail-label">Encuentro y oficio</span>
+                <p>Trabajo artesanal, comunidad y transmisión de saberes.</p>
+              </div>
+              <div class="detail-card">
+                <span class="detail-label">Visitanos</span>
+                <a
+                  class="inline-link"
+                  href="https://maps.app.goo.gl/rRPGDSfmMCezSJ6JA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Abrir ubicación en Google Maps
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="hero-media reveal" data-parallax>
-            <video
-              class="hero-video"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              aria-label="Video principal de la feria artesanal"
-            >
-              <source src="Selecciones/video1.MP4" type="video/mp4" />
-            </video>
-            <div class="hero-overlay">
-              <p class="eyebrow">Inicio</p>
-              <p class="hero-overlay-text">Asociación de Artesanos Independientes</p>
+          <div class="hero-visual reveal">
+            <div class="hero-video-card" data-parallax>
+              <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Video principal de la feria artesanal"
+              >
+                <source src="Selecciones/video1.MP4" type="video/mp4" />
+              </video>
+              <div class="hero-overlay">
+                <p class="eyebrow">Inicio</p>
+                <p class="hero-overlay-text">
+                  Artesanía viva, trabajo colectivo y presencia local.
+                </p>
+              </div>
             </div>
+
+            <aside class="hero-aside">
+              <p class="hero-aside-title">Una feria con identidad propia</p>
+              <p>
+                Compartimos piezas, procesos y un modo de trabajo sostenido por el
+                oficio, la cooperación y el arraigo en Cafayate.
+              </p>
+            </aside>
           </div>
         </div>
       </section>
 
-      <section class="section" id="quienes-somos">
+      <section class="section about-section" id="quienes-somos">
         <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Quiénes Somos</p>
-          </div>
-
-          <div class="about-grid">
-            <div class="about-copy reveal">
-              <blockquote class="mission-quote">
-                “A todos los artesanos y a todos aquellos que sientan la necesidad de
-                asumir el compromiso de crecimiento individual y colectivo, en defensa de
-                los intereses comunes”
-              </blockquote>
-              <p class="quote-source">Acta constitutiva, 20 de febrero, 2010</p>
-
-              <p>
-                Somos una asociación de artesanos que, desde Cafayate, construye día a
-                día un espacio de trabajo, encuentro y creación colectiva. Nuestro
-                recorrido, forjado con esfuerzo y cooperación, refleja una decisión
-                compartida: frente a la incertidumbre y las transformaciones del mundo en
-                general y el trabajo en particular, la salida es colectiva. Es en
-                comunidad que vamos a lograr construir un espacio de trabajo cada día más
-                digno y hermoso, para nosotros y para las futuras generaciones de
-                artesanos que se vayan sumando a nuestro proyecto para hacerlo suyo
-                también.
-              </p>
-
-              <p>
-                Entendemos la artesanía como algo más que un medio de sustento. Cada
-                pieza es una expresión singular, un objeto que condensa la historia, el
-                pensamiento y la sensibilidad de quien la crea. En ese proceso, el
-                artesano deja de ser anónimo para convertirse en autor de un bien cultural
-                que dialoga con su comunidad y con su tiempo.
-              </p>
-
-              <p>
-                Como asociación, nos proponemos ser una herramienta de desarrollo social.
-                Abrimos nuestras puertas al aprendizaje, al intercambio de saberes y al
-                acompañamiento de nuevas generaciones. Creemos en la transmisión de la
-                experiencia como base para que otros continúen, transformen y enriquezcan
-                este camino colectivo.
-              </p>
-
-              <p>Los esperamos!</p>
-
-              <p class="about-signoff">
-                Con cariño: Asociación de Artesanos Independientes Cafayate Artesanal
+          <div class="section-shell">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Quiénes Somos</p>
+              <h2>Una asociación nacida del trabajo compartido</h2>
+              <p class="section-intro">
+                Sostenemos un espacio de producción, encuentro y cuidado mutuo donde la
+                artesanía se vive como trabajo, cultura y comunidad.
               </p>
             </div>
 
-            <div class="about-media">
-              <article class="media-panel reveal">
-                <div class="panel-header">
-                  <p class="eyebrow">Taller de ceramica</p>
+            <div class="about-layout">
+              <div class="about-story reveal">
+                <blockquote class="mission-quote">
+                  “A todos los artesanos y a todos aquellos que sientan la necesidad de
+                  asumir el compromiso de crecimiento individual y colectivo, en defensa
+                  de los intereses comunes”
+                </blockquote>
+                <p class="quote-source">Acta constitutiva, 20 de febrero, 2010</p>
+
+                <div class="about-text">
+                  <p>
+                    Somos una asociación de artesanos que, desde Cafayate, construye día
+                    a día un espacio de trabajo, encuentro y creación colectiva. Nuestro
+                    recorrido, forjado con esfuerzo y cooperación, refleja una decisión
+                    compartida: frente a la incertidumbre y las transformaciones del mundo
+                    en general y el trabajo en particular, la salida es colectiva.
+                  </p>
+
+                  <p>
+                    Entendemos la artesanía como algo más que un medio de sustento. Cada
+                    pieza es una expresión singular, un objeto que condensa la historia,
+                    el pensamiento y la sensibilidad de quien la crea. En ese proceso, el
+                    artesano deja de ser anónimo para convertirse en autor de un bien
+                    cultural que dialoga con su comunidad y con su tiempo.
+                  </p>
+
+                  <p>
+                    Como asociación, nos proponemos ser una herramienta de desarrollo
+                    social. Abrimos nuestras puertas al aprendizaje, al intercambio de
+                    saberes y al acompañamiento de nuevas generaciones. Creemos en la
+                    transmisión de la experiencia como base para que otros continúen,
+                    transformen y enriquezcan este camino colectivo.
+                  </p>
                 </div>
 
-                <div class="video-frame">
-                  <video
-                    controls
-                    preload="metadata"
-                    playsinline
-                    aria-label="Video institucional de la asociación"
-                  >
-                    <source src="Selecciones/video2.mp4" type="video/mp4" />
-                    Este navegador no puede reproducir video HTML5.
-                  </video>
-                </div>
-              </article>
+                <p class="about-signoff">
+                  Los esperamos.<br />
+                  Con cariño: Asociación de Artesanos Independientes Cafayate Artesanal
+                </p>
+              </div>
 
-              <div class="image-cluster">
-                <figure class="cluster-card reveal">
-                  <img
-                    src="Selecciones/foto3.JPG"
-                    alt="Artesano junto a un telar"
-                    loading="lazy"
-                    width="2848"
-                    height="2134"
-                  />
-                </figure>
-                <figure class="cluster-card reveal shift-down">
-                  <img
-                    src="Selecciones/foto4.JPG"
-                    alt="Encuentro en la feria artesanal"
-                    loading="lazy"
-                    width="4320"
-                    height="3240"
-                  />
-                </figure>
-                <figure class="cluster-card reveal">
-                  <img
-                    src="Selecciones/foto5.JPG"
-                    alt="Producción artesanal en exposición"
-                    loading="lazy"
-                    width="4000"
-                    height="2248"
-                  />
-                </figure>
+              <div class="about-media reveal">
+                <article class="media-panel">
+                  <div class="panel-header">
+                    <p class="eyebrow">Taller y comunidad</p>
+                    <h3>Saberes que se comparten</h3>
+                  </div>
+
+                  <div class="video-frame">
+                    <video
+                      controls
+                      preload="metadata"
+                      playsinline
+                      aria-label="Video institucional de la asociación"
+                    >
+                      <source src="Selecciones/video2.mp4" type="video/mp4" />
+                      Este navegador no puede reproducir video HTML5.
+                    </video>
+                  </div>
+                </article>
+
+                <div class="about-notes">
+                  <article class="note-card">
+                    <p class="eyebrow">Trabajo colectivo</p>
+                    <p>Construimos un espacio digno y compartido para el oficio artesanal.</p>
+                  </article>
+                  <article class="note-card">
+                    <p class="eyebrow">Intercambio de saberes</p>
+                    <p>La experiencia circula, se transmite y se enriquece en comunidad.</p>
+                  </article>
+                  <article class="note-card">
+                    <p class="eyebrow">Nuevas generaciones</p>
+                    <p>El proyecto se abre a quienes quieran continuar y hacer suyo este camino.</p>
+                  </article>
+                </div>
+
+                <div class="image-cluster">
+                  <figure class="cluster-card cluster-wide">
+                    <img
+                      src="Selecciones/foto3.JPG"
+                      alt="Artesano junto a un telar"
+                      loading="lazy"
+                      width="2848"
+                      height="2134"
+                    />
+                  </figure>
+                  <figure class="cluster-card">
+                    <img
+                      src="Selecciones/foto4.JPG"
+                      alt="Encuentro en la feria artesanal"
+                      loading="lazy"
+                      width="4320"
+                      height="3240"
+                    />
+                  </figure>
+                  <figure class="cluster-card">
+                    <img
+                      src="Selecciones/foto5.JPG"
+                      alt="Producción artesanal en exposición"
+                      loading="lazy"
+                      width="4000"
+                      height="2248"
+                    />
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
@@ -216,80 +251,91 @@
 
       <section class="section history-section" id="historia">
         <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Nuestra Historia</p>
-            <h2>Tierra, postes y trabajo colectivo</h2>
-          </div>
-
-          <div class="history-grid">
-            <div class="history-media">
-              <figure class="history-card reveal">
-                <img
-                  src="Selecciones/foto1.jpg"
-                  alt="Primeros trabajos en el espacio de la asociación"
-                  loading="lazy"
-                  width="640"
-                  height="480"
-                />
-              </figure>
-              <figure class="history-card reveal offset-card">
-                <img
-                  src="Selecciones/foto2.jpg"
-                  alt="Construcción y organización del predio"
-                  loading="lazy"
-                  width="1600"
-                  height="1200"
-                />
-              </figure>
-              <div class="history-video reveal" data-parallax>
-                <video controls preload="metadata" playsinline aria-label="Video de la historia de la asociación">
-                  <source src="Selecciones/video3.mp4" type="video/mp4" />
-                </video>
-              </div>
+          <div class="section-shell">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Nuestra Historia</p>
+              <h2>Tierra, postes y trabajo colectivo</h2>
+              <p class="section-intro">
+                La historia de la asociación está hecha de encuentros, ferias, viajes y
+                celebraciones que fueron consolidando un proyecto común.
+              </p>
             </div>
 
-            <div class="timeline reveal">
-              <article class="timeline-block">
-                <p class="timeline-label">Año primero</p>
-                <h3>Julio de 2008 - julio del 2009</h3>
-                <ul>
-                  <li>Agosto, 2008: Desfile de prendas artesanales en nuestro predio</li>
-                  <li>Febrero, 2009: Fiesta de la Vendimia. Finca las Nubes (Cafayate)</li>
-                  <li>Primer Aniversario: Julio, 2009</li>
-                </ul>
-              </article>
+            <div class="history-layout">
+              <div class="history-media reveal">
+                <figure class="history-card history-card-tall">
+                  <img
+                    src="Selecciones/foto1.jpg"
+                    alt="Primeros trabajos en el espacio de la asociación"
+                    loading="lazy"
+                    width="640"
+                    height="480"
+                  />
+                  <figcaption>Primeras tareas en el predio de la asociación.</figcaption>
+                </figure>
 
-              <article class="timeline-block">
-                <p class="timeline-label">Año segundo</p>
-                <h3>Julio de 2009 - julio de 2010</h3>
-                <ul>
-                  <li>Septiembre, 2009: Décimo tercer Encuentro Nacional de Artesanos. San Fernando-Buenos Aires.</li>
-                  <li>Septiembre, 2009: Semana del turismo. Cineteatro Municipal de Cafayate</li>
-                  <li>Marzo, 2010: Séptima Fiesta de la Vendimia. Finca las Nubes, Cafayate</li>
-                  <li>Julio, 2010: Herencia Viva. Salón América, Salta. Secretaria de Turismo y Cultura, Salta</li>
-                  <li>Segundo Aniversario: Julio, 2010</li>
-                  <li>Festejo en la plaza 20 de Febrero, Cafayate</li>
-                </ul>
-              </article>
+                <figure class="history-card">
+                  <img
+                    src="Selecciones/foto2.jpg"
+                    alt="Construcción y organización del predio"
+                    loading="lazy"
+                    width="1600"
+                    height="1200"
+                  />
+                  <figcaption>Trabajo compartido para levantar y ordenar el espacio.</figcaption>
+                </figure>
 
-              <article class="timeline-block">
-                <p class="timeline-label">Año tercero</p>
-                <h3>Julio, 2010 - julio, 2011</h3>
-                <ul>
-                  <li>Julio, 2010: Encuentro Regional de Pequeños Emprendedores. Plaza de San Carlos, Salta. Ministerio de Desarrollo Social de la Nación</li>
-                  <li>Agosto, 2010: Feria del Tejido. San Telmo, Buenos Aires. Ministerio de Desarrollo Social de la Nación.</li>
-                  <li>Feria del Tejido. Centro Cívico. San Carlos de Bariloche, Rio Negro. Ministerio de Desarrollo Social de la Nación</li>
-                  <li>Septiembre, 2010: Décimo cuarto encuentro nacional de Artesanos. San Fernando, Buenos Aires. Feria de Artesanos de San Fernando, Municipalidad de San Fernando.</li>
-                  <li>Semana del turismo, 2010. Cafayate, Salta</li>
-                  <li>Noviembre, 2010: Feria Internacional de Artesanías. Puesto institucional de la provincia de Salta. Predio Ferial La Rural Buenos Aires “FUNDART”</li>
-                  <li>Diciembre, 2010: Feria de Navidad “Las Cañitas”, Ciudad Autónoma de Buenos Aires, Ministerio de Desarrollo Social de la Nación.</li>
-                  <li>Marzo, 2011: Desfile “Emprendedores de Nuestra Tierra”, Hotel Sheraton, Buenos Aires. Ministerio de Desarrollo Social de la Nación</li>
-                  <li>Octava fiesta de la vendimia, Finca las Nubes, Cafayate, Salta</li>
-                  <li>Abril, 2011: Telares del norte, Finca las Nubes, Cafayate</li>
-                  <li>Junio, 2011: Feria de políticas sociales. Instituciones de la economía social. Ministerio de desarrollo social de la Nación. Plaza de Amaicha del Valle Tucumán.</li>
-                  <li>Continúa…</li>
-                </ul>
-              </article>
+                <div class="history-video" data-parallax>
+                  <video controls preload="metadata" playsinline aria-label="Video de la historia de la asociación">
+                    <source src="Selecciones/video3.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+
+              <div class="timeline reveal">
+                <article class="timeline-block timeline-featured">
+                  <p class="timeline-label">Año primero</p>
+                  <h3>Julio de 2008 - julio de 2009</h3>
+                  <p class="timeline-summary">
+                    El comienzo del proyecto estuvo marcado por el trabajo en el predio y
+                    las primeras actividades que dieron forma pública a la asociación.
+                  </p>
+                  <ul>
+                    <li>Agosto, 2008: Desfile de prendas artesanales en nuestro predio.</li>
+                    <li>Febrero, 2009: Fiesta de la Vendimia. Finca Las Nubes, Cafayate.</li>
+                    <li>Julio, 2009: Primer aniversario.</li>
+                  </ul>
+                </article>
+
+                <article class="timeline-block">
+                  <p class="timeline-label">Año segundo</p>
+                  <h3>Julio de 2009 - julio de 2010</h3>
+                  <ul>
+                    <li>Septiembre, 2009: Décimo tercer Encuentro Nacional de Artesanos. San Fernando, Buenos Aires.</li>
+                    <li>Septiembre, 2009: Semana del turismo. Cineteatro Municipal de Cafayate.</li>
+                    <li>Marzo, 2010: Séptima Fiesta de la Vendimia. Finca Las Nubes, Cafayate.</li>
+                    <li>Julio, 2010: Herencia Viva. Salón América, Salta.</li>
+                    <li>Julio, 2010: Segundo aniversario y festejo en la plaza 20 de Febrero, Cafayate.</li>
+                  </ul>
+                </article>
+
+                <article class="timeline-block">
+                  <p class="timeline-label">Año tercero</p>
+                  <h3>Julio de 2010 - julio de 2011</h3>
+                  <ul>
+                    <li>Julio, 2010: Encuentro Regional de Pequeños Emprendedores. Plaza de San Carlos, Salta.</li>
+                    <li>Agosto, 2010: Feria del Tejido. San Telmo, Buenos Aires.</li>
+                    <li>Feria del Tejido. Centro Cívico. San Carlos de Bariloche, Río Negro.</li>
+                    <li>Septiembre, 2010: Décimo cuarto encuentro nacional de artesanos. San Fernando, Buenos Aires.</li>
+                    <li>Noviembre, 2010: Feria Internacional de Artesanías. Puesto institucional de Salta. Predio Ferial La Rural, Buenos Aires.</li>
+                    <li>Diciembre, 2010: Feria de Navidad “Las Cañitas”, Ciudad Autónoma de Buenos Aires.</li>
+                    <li>Marzo, 2011: Desfile “Emprendedores de Nuestra Tierra”, Hotel Sheraton, Buenos Aires.</li>
+                    <li>Abril, 2011: Telares del Norte, Finca Las Nubes, Cafayate.</li>
+                    <li>Junio, 2011: Feria de políticas sociales en Plaza de Amaicha del Valle, Tucumán.</li>
+                    <li>La historia continúa.</li>
+                  </ul>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -297,138 +343,201 @@
 
       <section class="section work-section" id="trabajo">
         <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Nuestro Trabajo</p>
-            <h2>Nuestro Trabajo</h2>
-          </div>
+          <div class="section-shell">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Nuestro Trabajo</p>
+              <h2>Una muestra viva del oficio artesanal</h2>
+              <p class="section-intro">
+                Nuestro trabajo reúne piezas textiles, objetos utilitarios, cerámica,
+                indumentaria y producciones artesanales realizadas por integrantes de la
+                asociación. Cada obra expresa saberes locales, oficio manual y una forma
+                colectiva de sostener la cultura del trabajo artesanal en Cafayate.
+              </p>
+            </div>
 
-          <div class="gallery-grid">
-            <figure class="gallery-item reveal">
-              <img
-                src="Selecciones/foto6.jpg"
-                alt="Textiles artesanales en tonos naturales"
-                loading="lazy"
-                width="2000"
-                height="3008"
-              />
-            </figure>
-            <figure class="gallery-item reveal">
-              <img
-                src="Selecciones/foto7.jpg"
-                alt="Ponchos y tejidos colgados en exposición"
-                loading="lazy"
-                width="3008"
-                height="2000"
-              />
-            </figure>
-            <figure class="gallery-item reveal">
-              <img
-                src="Selecciones/foto8.jpg"
-                alt="Textiles artesanales exhibidos en la feria"
-                loading="lazy"
-                width="3008"
-                height="2000"
-              />
-            </figure>
-            <figure class="gallery-item reveal">
-              <img
-                src="Selecciones/foto9.jpg"
-                alt="Prendas tejidas con motivos regionales"
-                loading="lazy"
-                width="3008"
-                height="2000"
-              />
-            </figure>
-            <figure class="gallery-item reveal">
-              <img
-                src="Selecciones/foto10.jpg"
-                alt="Artesana rodeada de tejidos y prendas"
-                loading="lazy"
-                width="3008"
-                height="2000"
-              />
-            </figure>
-            <figure class="gallery-item reveal">
-              <img
-                src="Selecciones/foto11.JPG"
-                alt="Muestra de tejidos artesanales"
-                loading="lazy"
-                width="3264"
-                height="2176"
-              />
-            </figure>
-            <figure class="gallery-item reveal">
-              <img
-                src="Selecciones/foto12.JPG"
-                alt="Puestos y piezas de la asociación"
-                loading="lazy"
-                width="1600"
-                height="1200"
-              />
-            </figure>
-            <figure class="gallery-item reveal">
-              <img
-                src="Selecciones/foto13.JPG"
-                alt="Producción artesanal expuesta en feria"
-                loading="lazy"
-                width="1600"
-                height="1200"
-              />
-            </figure>
+            <div class="work-toolbar reveal">
+              <p class="work-toolbar-title">Recorré la muestra</p>
+              <div class="work-filters" aria-label="Filtrar galería">
+                <button class="filter-chip is-active" type="button" data-filter="all">Todas</button>
+                <button class="filter-chip" type="button" data-filter="textiles">Textiles</button>
+                <button class="filter-chip" type="button" data-filter="ceramica">Cerámica</button>
+                <button class="filter-chip" type="button" data-filter="indumentaria">Indumentaria</button>
+                <button class="filter-chip" type="button" data-filter="utilitarias">Piezas utilitarias</button>
+                <button class="filter-chip" type="button" data-filter="feria">Feria y puestos</button>
+                <button class="filter-chip" type="button" data-filter="procesos">Procesos</button>
+              </div>
+            </div>
+
+            <div class="work-gallery">
+              <figure
+                class="gallery-card gallery-card-featured reveal"
+                data-category="textiles indumentaria"
+              >
+                <img
+                  src="Selecciones/foto6.jpg"
+                  alt="Textiles artesanales en tonos naturales"
+                  loading="lazy"
+                  width="2000"
+                  height="3008"
+                />
+                <figcaption>
+                  <span class="gallery-tag">Textiles artesanales</span>
+                  <strong>Piezas protagonistas de la muestra</strong>
+                  <span>
+                    Tramas, color y oficio manual en una selección de trabajos textiles de
+                    la asociación.
+                  </span>
+                </figcaption>
+              </figure>
+
+              <div class="gallery-grid">
+                <figure class="gallery-card reveal" data-category="textiles feria">
+                  <img
+                    src="Selecciones/foto7.jpg"
+                    alt="Ponchos y tejidos colgados en exposición"
+                    loading="lazy"
+                    width="3008"
+                    height="2000"
+                  />
+                  <figcaption>
+                    <span class="gallery-tag">Ponchos y tejidos</span>
+                    <strong>Muestra textil</strong>
+                  </figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal" data-category="textiles procesos">
+                  <img
+                    src="Selecciones/foto8.jpg"
+                    alt="Textiles artesanales exhibidos en la feria"
+                    loading="lazy"
+                    width="3008"
+                    height="2000"
+                  />
+                  <figcaption>
+                    <span class="gallery-tag">Procesos</span>
+                    <strong>Trabajo textil en exhibición</strong>
+                  </figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal" data-category="indumentaria textiles">
+                  <img
+                    src="Selecciones/foto9.jpg"
+                    alt="Prendas tejidas con motivos regionales"
+                    loading="lazy"
+                    width="3008"
+                    height="2000"
+                  />
+                  <figcaption>
+                    <span class="gallery-tag">Indumentaria</span>
+                    <strong>Prendas con identidad regional</strong>
+                  </figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal" data-category="feria procesos">
+                  <img
+                    src="Selecciones/foto10.jpg"
+                    alt="Artesana rodeada de tejidos y prendas"
+                    loading="lazy"
+                    width="3008"
+                    height="2000"
+                  />
+                  <figcaption>
+                    <span class="gallery-tag">Feria y puestos</span>
+                    <strong>Presencia de las artesanas</strong>
+                  </figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal" data-category="textiles utilitarias">
+                  <img
+                    src="Selecciones/foto11.JPG"
+                    alt="Muestra de tejidos artesanales"
+                    loading="lazy"
+                    width="3264"
+                    height="2176"
+                  />
+                  <figcaption>
+                    <span class="gallery-tag">Piezas utilitarias</span>
+                    <strong>Textiles para el uso cotidiano</strong>
+                  </figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal" data-category="feria utilitarias">
+                  <img
+                    src="Selecciones/foto12.JPG"
+                    alt="Puestos y piezas de la asociación"
+                    loading="lazy"
+                    width="1600"
+                    height="1200"
+                  />
+                  <figcaption>
+                    <span class="gallery-tag">Puestos de la feria</span>
+                    <strong>Producción compartida</strong>
+                  </figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal" data-category="ceramica utilitarias">
+                  <img
+                    src="Selecciones/foto13.JPG"
+                    alt="Producción artesanal expuesta en feria"
+                    loading="lazy"
+                    width="1600"
+                    height="1200"
+                  />
+                  <figcaption>
+                    <span class="gallery-tag">Cerámica artesanal</span>
+                    <strong>Piezas expuestas en la feria</strong>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <p class="eyebrow">Cafayate Artesanal</p>
-          <p class="footer-title">Asociación de Artesanos Independientes</p>
+      <div class="container footer-shell">
+        <div class="footer-copy">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="footer-title">Cafayate Artesanal</h2>
+          <p class="footer-text">
+            Te invitamos a visitarnos, conocer nuestra feria y acompañar el trabajo
+            artesanal local.
+          </p>
         </div>
+
         <div class="footer-contact">
+          <p>Vicario Toscano 58, A4427 Cafayate, Salta</p>
+          <a href="mailto:cafayateartesanal@gmail.com">cafayateartesanal@gmail.com</a>
           <a
-            class="inline-link"
+            href="https://www.instagram.com/cafayateartesanal/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @cafayateartesanal
+          </a>
+        </div>
+
+        <div class="footer-actions">
+          <a
+            class="button button-primary"
             href="https://maps.app.goo.gl/rRPGDSfmMCezSJ6JA"
             target="_blank"
             rel="noreferrer"
           >
-            Vicario Toscano 58, A4427 Cafayate, Salta
+            Cómo llegar
           </a>
-
-          <div class="footer-socials" aria-label="Redes y contacto">
-            <a
-              class="footer-social"
-              href="https://www.instagram.com/cafayateartesanal/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram de Cafayate Artesanal"
-            >
-              <img
-                src="Selecciones/iconoIG.png"
-                alt=""
-                loading="lazy"
-                width="64"
-                height="64"
-              />
-              <span>@cafayateartesanal</span>
-            </a>
-
-            <a
-              class="footer-social"
-              href="mailto:cafayateartesanal@gmail.com"
-              aria-label="Enviar correo a Cafayate Artesanal"
-            >
-              <img
-                src="Selecciones/iconogmail.webp"
-                alt=""
-                loading="lazy"
-                width="64"
-                height="64"
-              />
-              <span>cafayateartesanal@gmail.com</span>
-            </a>
-          </div>
+          <a
+            class="button button-secondary"
+            href="https://www.instagram.com/cafayateartesanal/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+          <a class="button button-secondary" href="mailto:cafayateartesanal@gmail.com">
+            Enviar correo
+          </a>
         </div>
       </div>
     </footer>
