@@ -334,6 +334,10 @@ section[id] {
   margin-bottom: clamp(1.8rem, 3vw, 2.8rem);
 }
 
+.section-heading--compact {
+  margin-bottom: clamp(1.4rem, 2.4vw, 2rem);
+}
+
 .section-heading h2 {
   margin: 0;
   font-size: clamp(2.5rem, 5vw, 4.6rem);
@@ -361,8 +365,8 @@ section[id] {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1.22fr);
-  gap: clamp(1.6rem, 3vw, 2.75rem);
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: stretch;
 }
 
@@ -383,7 +387,8 @@ section[id] {
   flex-direction: column;
   justify-content: center;
   gap: 1.2rem;
-  min-height: min(74vh, 680px);
+  min-width: 0;
+  min-height: clamp(420px, 56vw, 680px);
   padding: clamp(2rem, 4vw, 3.8rem);
   border-radius: 0;
   background: var(--surface-strong);
@@ -391,9 +396,18 @@ section[id] {
 
 .hero-copy h1 {
   margin: 0;
-  font-size: clamp(3.3rem, 7vw, 6rem);
-  line-height: 0.88;
+  max-width: 11ch;
+  font-size: clamp(2.95rem, 6vw, 4.9rem);
+  line-height: 0.92;
   letter-spacing: -0.04em;
+}
+
+.hero-title-line {
+  display: block;
+}
+
+.hero-title-line + .hero-title-line {
+  margin-top: 0.3rem;
 }
 
 .hero-lead {
@@ -457,7 +471,7 @@ section[id] {
   grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 0.6rem;
-  max-width: 16rem;
+  width: min(100%, 320px);
 }
 
 .detail-card {
@@ -476,11 +490,13 @@ section[id] {
 .hero-visual {
   display: block;
   align-self: stretch;
+  min-width: 0;
 }
 
 .hero-video-card {
   position: relative;
-  min-height: min(78vh, 720px);
+  height: 100%;
+  min-height: clamp(420px, 58vw, 680px);
   border-radius: 0;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -839,9 +855,25 @@ section[id] {
   display: none;
 }
 
+.home-sections-cover {
+  width: 100%;
+  margin: 0 0 clamp(1.8rem, 3vw, 2.4rem);
+  border: 1px solid rgba(90, 70, 55, 0.16);
+  background: #f6f1e8;
+  overflow: hidden;
+}
+
+.home-sections-cover img {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 34vw, 420px);
+  object-fit: cover;
+  object-position: center 42%;
+}
+
 .page-link-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
@@ -1068,12 +1100,11 @@ section[id] {
   }
 
   .hero-video-card {
-    min-height: 30rem;
+    min-height: 20rem;
   }
 
   .history-media,
   .gallery-grid,
-  .page-link-grid,
   .footer-action-grid {
     grid-template-columns: 1fr;
   }
@@ -1100,6 +1131,7 @@ section[id] {
 
   .hero-copy h1 {
     font-size: clamp(3rem, 14vw, 4.8rem);
+    max-width: none;
   }
 
   .timeline-block h3,
@@ -1152,6 +1184,10 @@ section[id] {
 
   .mission-quote {
     font-size: 1.7rem;
+  }
+
+  .page-link-grid {
+    grid-template-columns: 1fr;
   }
 }
 
