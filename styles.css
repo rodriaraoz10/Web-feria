@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -124,7 +125,7 @@ select {
   z-index: 0;
   overflow: clip;
   display: grid;
-  gap: clamp(2.5rem, 4vw, 4rem);
+  gap: clamp(1.2rem, 2vw, 2rem);
   padding: clamp(1.2rem, 3vw, 2.3rem) 0 clamp(3rem, 5vw, 4.2rem);
 }
 
@@ -307,9 +308,12 @@ section[id] {
 
 .section {
   position: relative;
-  min-height: calc(100svh - 7rem);
+  min-height: 100svh;
   display: grid;
   align-items: center;
+  padding: 0.5rem 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .section::after {
@@ -340,6 +344,9 @@ section[id] {
   background: linear-gradient(180deg, rgba(255, 252, 247, 0.82), rgba(255, 249, 242, 0.72));
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
+  min-height: calc(100svh - 10rem);
+  display: grid;
+  align-content: center;
 }
 
 .section-heading {
@@ -814,6 +821,11 @@ section[id] {
   gap: 1.2rem;
 }
 
+.work-section .section-shell,
+.history-section .section-shell {
+  align-content: start;
+}
+
 .gallery-card {
   position: relative;
   margin: 0;
@@ -992,6 +1004,7 @@ section[id] {
   .section {
     min-height: auto;
     align-items: start;
+    padding: 0;
   }
 
   .hero-layout,
@@ -1032,6 +1045,7 @@ section[id] {
 
   .section-shell {
     padding: 1.5rem;
+    min-height: auto;
   }
 
   .hero-copy h1 {
@@ -1042,6 +1056,12 @@ section[id] {
   .timeline-block h3,
   .panel-header h3 {
     font-size: 1.55rem;
+  }
+}
+
+@media (min-width: 981px) {
+  html {
+    scroll-snap-type: y proximity;
   }
 }
 
