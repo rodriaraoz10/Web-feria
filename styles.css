@@ -396,9 +396,9 @@ section[id] {
 
 .hero-copy h1 {
   margin: 0;
-  max-width: 9ch;
-  font-size: clamp(2.35rem, 4.9vw, 3.95rem);
-  line-height: 0.94;
+  max-width: 8ch;
+  font-size: clamp(1.95rem, 4.15vw, 3.2rem);
+  line-height: 0.96;
   letter-spacing: -0.03em;
 }
 
@@ -425,21 +425,17 @@ section[id] {
 .hero-support {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+  grid-template-columns: auto minmax(0, 1fr);
   gap: clamp(1.2rem, 3vw, 2rem);
-  align-items: start;
-}
-
-.hero-support .hero-actions {
-  align-self: stretch;
-}
-
-.hero-support .hero-actions,
-.hero-support .hero-details {
+  align-items: center;
   padding: 1.15rem 1.2rem;
   border: 1px solid var(--line);
   background: rgba(255, 251, 245, 0.78);
   box-shadow: var(--shadow-soft);
+}
+
+.hero-support .hero-actions {
+  align-self: center;
 }
 
 .button {
@@ -1159,11 +1155,15 @@ section[id] {
   }
 
   .hero-layout,
-  .hero-support,
   .about-layout,
   .history-layout,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .hero-support {
+    grid-template-columns: 1fr;
+    align-items: start;
   }
 
   .hero-copy,
@@ -1210,8 +1210,7 @@ section[id] {
     max-width: none;
   }
 
-  .hero-support .hero-actions,
-  .hero-support .hero-details {
+  .hero-support {
     padding: 1rem;
   }
 
