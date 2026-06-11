@@ -213,12 +213,12 @@ section[id] {
 }
 
 .brand-name {
-  font-size: 1.95rem;
-  line-height: 0.98;
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  line-height: 1.1;
   font-weight: 700;
+  max-width: 24rem;
 }
 
-.brand-subtitle,
 .eyebrow,
 .detail-label,
 .timeline-label,
@@ -396,12 +396,6 @@ section[id] {
   font-size: clamp(3.3rem, 7vw, 6rem);
   line-height: 0.88;
   letter-spacing: -0.04em;
-}
-
-.hero-subtitle {
-  margin: 0;
-  font-size: clamp(1.05rem, 2vw, 1.3rem);
-  color: var(--accent-strong);
 }
 
 .hero-lead {
@@ -884,7 +878,7 @@ section[id] {
 
 .page-link-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -905,8 +899,7 @@ section[id] {
   background: rgba(255, 248, 240, 0.88);
 }
 
-.page-link-card h3,
-.audiovisual-text h3 {
+.page-link-card h3 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.6rem;
@@ -915,39 +908,11 @@ section[id] {
 }
 
 .page-link-card p,
-.audiovisual-text p,
 .contact-list p,
 .contact-list a {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
-}
-
-.audiovisual-feature {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.65fr) minmax(0, 1.35fr);
-  gap: 1rem;
-  align-items: stretch;
-}
-
-.audiovisual-feature .video-frame {
-  min-height: 28rem;
-}
-
-.audiovisual-text {
-  display: grid;
-  align-content: start;
-  gap: 0.75rem;
-  padding: 1.3rem;
-  border: 1px solid rgba(88, 60, 41, 0.14);
-  background: rgba(255, 250, 243, 0.82);
-  box-shadow: var(--shadow-soft);
-}
-
-.audiovisual-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
 }
 
 .contact-layout {
@@ -1006,8 +971,9 @@ section[id] {
 
 .footer-title {
   margin: 0;
-  font-size: clamp(3rem, 6vw, 4.8rem);
-  line-height: 0.9;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  line-height: 0.96;
+  max-width: 14ch;
 }
 
 .footer-copy {
@@ -1130,7 +1096,6 @@ section[id] {
   .hero-layout,
   .about-layout,
   .history-layout,
-  .audiovisual-feature,
   .contact-layout {
     grid-template-columns: 1fr;
   }
@@ -1146,7 +1111,6 @@ section[id] {
 
   .history-media,
   .gallery-grid,
-  .audiovisual-grid,
   .page-link-grid,
   .footer-action-grid {
     grid-template-columns: 1fr;
@@ -1204,11 +1168,6 @@ section[id] {
 
   .brand-name {
     font-size: 1.55rem;
-  }
-
-  .brand-subtitle {
-    font-size: 0.67rem;
-    letter-spacing: 0.14em;
   }
 
   .hero-copy,
