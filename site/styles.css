@@ -893,12 +893,13 @@ section[id] {
 }
 
 .page-link-grid--trio {
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1.08fr) minmax(220px, 0.84fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
 }
 
 .page-link-card {
   display: grid;
+  grid-template-rows: auto 1fr;
   align-content: start;
   gap: 0.7rem;
   padding: 1.2rem;
@@ -917,12 +918,12 @@ section[id] {
 
 .page-link-card-featured {
   min-height: 13.5rem;
-  padding: 1.4rem;
+  padding: 1.35rem;
 }
 
 .page-link-card-compact {
   min-height: 13.5rem;
-  align-content: center;
+  padding: 1.35rem;
   background:
     linear-gradient(180deg, rgba(255, 249, 242, 0.88) 0%, rgba(243, 231, 219, 0.86) 100%);
 }
@@ -933,6 +934,7 @@ section[id] {
   font-size: 1.6rem;
   line-height: 1.02;
   font-weight: 700;
+  align-self: start;
 }
 
 .page-link-card p,
@@ -1141,7 +1143,7 @@ section[id] {
 
   .page-link-card-compact {
     grid-column: 1 / -1;
-    min-height: auto;
+    min-height: 12rem;
   }
 
   .footer-shell {
